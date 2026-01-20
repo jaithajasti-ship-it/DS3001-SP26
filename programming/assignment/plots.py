@@ -1,15 +1,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
-Add imports for numpy and matplotlib
-x = np.linspace(0, 1, 50)
-y_log = np.log(x)
-y_exp = np.exp(x)
 
-plt.scatter(x, y_log, label='Natural Log')
-plt.scatter(x, y_exp, label='Exponential')
+# Create grid of points
+x = np.linspace(-6.5, 6.5, 100)
 
+# Compute sine and cosine
+y_sin = np.sin(x)
+y_cos = np.cos(x)
+
+# Plot as line graphs
+plt.plot(x, y_sin, label='Sine')
+plt.plot(x, y_cos, label='Cosine')
+
+# Add labels and title
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Natural Log and Exponential Functions')
-plt.legend(loc='lower right')
+plt.title('Sine and Cosine Functions')
+
+# Add legend
+plt.legend(loc='lower left')
+
+# Show plot
 plt.show()
